@@ -8,8 +8,6 @@
 profissionais que buscam aumentar a produtividade e o foco. Este projeto é uma versão beta e atualmente possui
 funcionalidades básicas de temporização de sessões.
 
-- [🍅 Acesse o Projeto](https://ignite-timer-lilac-delta.vercel.app)
-
 ## 🔨 Funcionalidades
 
 - Temporizadores de sessão Pomodoro.
