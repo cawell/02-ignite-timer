@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+<h1>
+  Pomodoro Beta
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 💻 Projeto
 
-Currently, two official plugins are available:
+🚧 O Pomodoro Beta é uma ferramenta de gerenciamento de tempo baseada na técnica Pomodoro, ideal para estudantes e
+profissionais que buscam aumentar a produtividade e o foco. Este projeto é uma versão beta e atualmente possui
+funcionalidades básicas de temporização de sessões.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [🍅 Acesse o Projeto](https://ignite-timer-lilac-delta.vercel.app)
 
-## Expanding the ESLint configuration
+## 🔨 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Temporizadores de sessão Pomodoro.
+- Sessões são reiniciadas ao recarregar a página (melhorias em andamento).
 
-- Configure the top-level `parserOptions` property like this:
+## ✨ Tecnologias
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [x] HTML
+- [x] CSS
+- [x] JavaScript
+- [x] Hospedagem na Vercel
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🏃‍♂️ Acessando o Projeto
+
+Para acessar o projeto, visite o link: [Pomodoro Beta](https://ignite-timer-lilac-delta.vercel.app).
+
+## 🤝 Contribuições
+
+Contribuições são sempre bem-vindas! Se você tem alguma ideia ou sugestão para melhorar o projeto, fique à vontade para
+criar uma "issue" ou enviar um "pull request".
+
