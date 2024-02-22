@@ -15,33 +15,9 @@ interface CyclesState {
   activateCycleId: string | null
 }
 
-interface NewCyclePayload {
-  newCycle: Cycle
-}
-
-interface Action<T = string, P = NonNullable<unknown>> {
-  type: T
-  payload: P
-}
-
-type AddNewCycleAction = Action<'ADD_NEW_CYCLE', NewCyclePayload>
-type InterruptCurrentCycleAction = Action<'INTERRUPT_CURRENT_CYCLE'>
-type MarkCurrentCycleAsFinishedAction = Action<'MARK_CURRENT_CYCLE_AS_FINISHED'>
-
-type CycleActionTypes =
-  | AddNewCycleAction
-  | InterruptCurrentCycleAction
-  | MarkCurrentCycleAsFinishedAction
-
-export const cyclesReducer = (state: CyclesState, action: CycleActionTypes) => {
+export const cyclesReducer = (state: CyclesState, action: never) => {
   switch (action.type) {
     case ActionTypes.ADD_NEW_CYCLE:
-      // return {
-      //   ...state,
-      //   cycles: [...state.cycles, action.payload.newCycle],
-      //   activateCycleId: action.payload.newCycle.id,
-      // }
-
       return produce(state, (draft) => {
         draft.cycles.push(action.payload.newCycle)
         draft.activateCycleId = action.payload.newCycle.id
