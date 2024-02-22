@@ -1,4 +1,4 @@
-import { ActionTypes } from './actions.ts'
+import { ActionTypes, CyclesAction } from './actions.ts'
 import { produce } from 'immer'
 
 export interface Cycle {
@@ -15,7 +15,7 @@ interface CyclesState {
   activateCycleId: string | null
 }
 
-export const cyclesReducer = (state: CyclesState, action: never) => {
+export const cyclesReducer = (state: CyclesState, action: CyclesAction) => {
   switch (action.type) {
     case ActionTypes.ADD_NEW_CYCLE:
       return produce(state, (draft) => {

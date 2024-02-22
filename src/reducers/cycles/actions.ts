@@ -6,7 +6,27 @@ export const enum ActionTypes {
   MARK_CURRENT_CYCLE_AS_FINISHED = 'MARK_CURRENT_CYCLE_AS_FINISHED',
 }
 
-export const addNewCycleAction = (newCycle: Cycle) => {
+export interface AddNewCycleAction {
+  type: ActionTypes.ADD_NEW_CYCLE
+  payload: {
+    newCycle: Cycle
+  }
+}
+
+export interface InterruptCycleAction {
+  type: ActionTypes.INTERRUPT_CURRENT_CYCLE
+}
+
+export interface MarkCycleAsFinishedAction {
+  type: ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED
+}
+
+export type CyclesAction =
+  | AddNewCycleAction
+  | InterruptCycleAction
+  | MarkCycleAsFinishedAction
+
+export const addNewCycleAction = (newCycle: Cycle): AddNewCycleAction => {
   return {
     type: ActionTypes.ADD_NEW_CYCLE,
     payload: {
@@ -15,13 +35,13 @@ export const addNewCycleAction = (newCycle: Cycle) => {
   }
 }
 
-export const markCurrentCycleFinishedAction = () => {
+export const markCurrentCycleFinishedAction = (): MarkCycleAsFinishedAction => {
   return {
     type: ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED,
   }
 }
 
-export const interruptCurrentCycleAction = () => {
+export const interruptCurrentCycleAction = (): InterruptCycleAction => {
   return {
     type: ActionTypes.INTERRUPT_CURRENT_CYCLE,
   }
