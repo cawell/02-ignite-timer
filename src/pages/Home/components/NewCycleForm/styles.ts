@@ -10,6 +10,19 @@ export const FormContainer = styled.div`
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
+
+  @media (max-width: 720px) {
+    align-items: stretch;
+    justify-content: start;
+
+    /* Novo estilo para os itens filhos */
+    & > * {
+      flex-basis: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 `
 
 const BaseInput = styled.input`

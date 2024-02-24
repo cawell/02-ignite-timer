@@ -25,7 +25,6 @@ export const NewCycleForm = () => {
         <option value="Projeto 1"></option>
         <option value="Projeto 2"></option>
         <option value="Projeto 3"></option>
-        <option value="Banana"></option>
       </datalist>
 
       <label htmlFor="minutesAmount">durante</label>
