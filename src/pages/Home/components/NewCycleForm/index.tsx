@@ -4,8 +4,12 @@ import { useFormContext } from 'react-hook-form'
 import { CyclesContext } from '../../../../contexts/CyclesContext.tsx'
 
 export const NewCycleForm = () => {
-  const { activeCycle } = useContext(CyclesContext)
+  const { activeCycle, cycles } = useContext(CyclesContext)
   const { register } = useFormContext()
+
+  const sortedCycles = [...cycles].sort(
+    (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime(),
+  )
 
   if (activeCycle) {
     return null
@@ -22,9 +26,9 @@ export const NewCycleForm = () => {
       />
 
       <datalist id="task-suggestions">
-        <option value="Projeto 1"></option>
-        <option value="Projeto 2"></option>
-        <option value="Projeto 3"></option>
+        {sortedCycles.map((cycle) => {
+          return <option key={cycle.id} value={cycle.task}></option>
+        })}
       </datalist>
 
       <label htmlFor="minutesAmount">durante</label>
